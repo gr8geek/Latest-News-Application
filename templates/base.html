@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <title>
-        {%block title%}
-        {%endblock}
-    </title>
+    <style>
+        nav.a{
+            color:azure;
+        }
+    </style>
+    <head>
+        <nav style="background:blue">
+
+            <h1>{{channel}} headlines</h1>
+            <a href="/?publication=bbc">BBC</a>
+            <a href="/?publication=ndtv">NDV</a>
+            <a href="/?publication=zee">ZEE news</a>
+        
+            </nav>
+            <title>
+                {%block title%}
+                {%endblock%}
+            </title>
+        
+    </head>
     <body>
-        {%block txt%}
-        {%endblock%}
         {%block news%}
         {%endblock%}
     </body>

@@ -1,4 +1,18 @@
 {%extends 'base.html'%}
 
+{%block title%}
+{{channel}}
+{%endblock%}
 
-{%block tile%}
+{%block news%}
+<h1>{{chennel}} Headlines
+</h1>
+
+<br>
+{%for i in news%}
+    <h3>{{i.title}}</h3>
+    <p><i>Published at {{i.published}}</i></p>
+    <p><a href="{{i.link}}">{{i.summary}}</a></p>
+{%endfor%}
+{%endblock%}
+

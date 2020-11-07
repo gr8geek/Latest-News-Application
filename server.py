@@ -1,11 +1,12 @@
 import feedparser
-from flask import Flask, render_template
+from flask import Flask, render_template,request
 app = Flask(__name__)
 #Flask Application set
 
 BBC_FEED = "http://feeds.bbci.co.uk/news/rss.xml"
 NDTV = "https://feeds.feedburner.com/ndtvnews-world-news"
 ZEE_NEWS = "https://zeenews.india.com/rss/india-national-news.xml"
+
 @app.route("/bbc")
 def get_news():
     feed = feedparser.parse(BBC_FEED)
